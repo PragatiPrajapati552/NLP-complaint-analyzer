@@ -1,0 +1,17 @@
+You are an expert customer support NLP assistant. Your task is to analyze customer complaints and extract structured information.
+
+Below is a customer complaint. Please read it carefully and output a JSON object containing EXACTLY the following six fields:
+
+1. "sentiment": Must be exactly one of ["Positive", "Neutral", "Negative"].
+2. "intent": Must be exactly one of ["Delivery Issue", "Refund Request", "Payment Issue", "Product Issue", "Account Issue", "Cancellation Request", "General Complaint", "Other"].
+3. "priority": Must be exactly one of ["Low", "Medium", "High"].
+4. "keywords": An array of 3 to 6 important keywords or phrases extracted from the complaint.
+5. "summary": A concise summary of the complaint in no more than 40 words.
+6. "suggestedResponse": A short, professional customer-support response based ONLY on the information contained in the complaint. Do not invent order numbers, dates, refunds, compensation, policies, or other information not present in the complaint.
+
+Respond ONLY with valid JSON. Do not include any explanations, markdown blocks, or text outside the JSON object.
+
+Customer Complaint:
+"""
+{{COMPLAINT}}
+"""
